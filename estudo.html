@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image:url(https://i.imgur.com/71XK7yz.png);
+            background-size: cover;
+            background-position: center center;
+        }
+        #heading {
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        #heading a {
+            color: rgb(153, 22, 29);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 40px;
+            margin: auto;
+        }
+        h1, h2 {
+            margin: 20px;
+        }
+        .email-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        input[type=email], button[type=submit] {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        input[type=email] {
+            width: 500.5px;
+            height: 56px;
+            border: 1px solid #ccc;
+        }
+        button[type=submit] {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 177.5px;
+            height: 56px;
+        }
+        button[type=submit]:hover {
+            opacity: 0.8;
+        }
+        #message {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #E50914; /* Texto preto */
+            background-color: black;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 10px;
+            padding: 10px;
+            border: 2px solid #E50914; /* Borda vermelha */
+            border-radius: 5px;
+            width: 80%;
+            max-width: 600px;
+            display: none; /* Esconde inicialmente */
+            box-shadow: 0px 0px 10px rgba(229, 9, 20, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header id="heading">
+        <h1><a href="#">Brenoflix</a></h1>
+        <h2><a href="#">Entrar</a></h2>
+    </header>
+    <div class="email-container">
+        <input type="email" id="email" name="email" placeholder="Email ou número de telefone">
+        <button type="submit" id="submit-button">Entrar</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function() {
+    var messageElement = document.getElementById('message');
+    messageElement.textContent = 'VOCÊ ME DEVE UM PS5 /j';
+    messageElement.style.display = 'block'; // Mostra a mensagem e a borda
+});
+    </script>
+</body>
+</html>
